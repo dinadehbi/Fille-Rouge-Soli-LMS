@@ -6,4 +6,3 @@ Le projet vise à développer une plateforme intuitive et performante qui répon
 
 - **Pour les apprenants** : Offrir une interface simple et interactive qui leur permet de répondre rapidement aux QCM. Le système fournira un retour immédiat sur leurs performances, leur permettant d'identifier leurs forces et faiblesses. 
 
-L’objectif principal est d’assurer une expérience utilisateur fluide et sécurisée pour les deux parties, tout en optimisant le processus d’apprentissage et d’évaluation.
