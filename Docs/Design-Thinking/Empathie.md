@@ -16,7 +16,7 @@ L’apprenant est une personne qui utilise le système pour répondre aux QCM cr
   - "Est-ce que mes résultats seront bien enregistrés et analysés ?"  
   - "J’espère que les questions seront claires et bien formulées."  
 
-- **Ce dont il a besoin :**  
+- **Ce quil a besoin :**  
   - Une interface simple et intuitive pour répondre facilement aux questions.  
   - Une notification claire pour savoir si ses réponses sont soumises avec succès.  
   - Un feedback détaillé sur ses performances pour améliorer ses connaissances.  
@@ -40,7 +40,7 @@ Le formateur est l'utilisateur principal qui crée, modifie et analyse les QCM. 
   - "Le système est-il assez sécurisé pour protéger mes données ?"  
   - "Je veux avoir des statistiques claires sur les performances des apprenants."  
 
-- **Ce dont il a besoin :**  
+- **Ce qu'il a besoin :**  
   - Un tableau de bord bien structuré pour gérer les QCM et consulter les résultats.  
   - Une interface sécurisée pour garantir que seul le formateur a accès aux fonctionnalités sensibles.  
   - Des outils de reporting pour exporter les résultats ou les analyser en profondeur.  
