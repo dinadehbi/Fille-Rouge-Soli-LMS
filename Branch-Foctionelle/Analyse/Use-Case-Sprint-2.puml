@@ -1,0 +1,10 @@
+@startuml
+actor Apprenant
+
+usecase "Répondre au QCM" as UC1
+usecase "Voir les résultats" as UC2
+
+Apprenant -down-- UC1
+Apprenant -down-- UC2
+
+@enduml
