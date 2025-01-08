@@ -1,0 +1,50 @@
+classDiagram
+    class QCM {
+        + int id
+        + String title
+        + String description
+        + DateTime created_at
+        + DateTime updated_at
+    }
+
+    class Question {
+        + int id
+        + int qcm_id
+        + String text
+        + String type
+    }
+
+    class Choice {
+        + int id
+        + int question_id
+        + String text
+        + Boolean is_correct
+    }
+
+    class Resultat {
+        + int id
+        + int qcm_id
+        + int apprenant_id
+        + float score
+        + DateTime completed_at
+    }
+
+    class Apprenant {
+        + int id
+        + String name
+        + String email
+        + String password
+    }
+
+    class Formateur {
+        + int id
+        + String name
+        + String email
+        + String password
+    }
+
+    QCM "1" -- "0..*" Question : contient
+    Question "1" -- "0..*" Choice : contient
+    QCM "1" -- "0..*" Resultat : lié à
+    Resultat "0..*" -- "1" Apprenant : appartient à
+    Formateur "1" -- "0..*" QCM : crée
