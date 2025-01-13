@@ -1,10 +1,12 @@
 @startuml
 actor Apprenant
+actor Formateur
 
-usecase "Répondre au QCM" as UC1
-usecase "Voir les résultats" as UC2
+usecase "Consulter les résultats des apprenants" as UC6
+usecase "Analyser les statistiques" as UC7
+usecase "Gérer les questions" as UC8
 
-Apprenant -down-- UC1
-Apprenant -down-- UC2
-
+Formateur -down-- UC6
+Formateur -down-- UC7
+Formateur -down-- UC8
 @enduml

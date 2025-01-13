@@ -7,6 +7,8 @@ usecase "Voir les résultats" as UC2
 usecase "Créer et publier un QCM" as UC4
 usecase "Gérer les QCM" as UC5
 usecase "Consulter les résultats des apprenants" as UC6
+usecase "Analyser les statistiques" as UC7
+usecase "Gérer les questions" as UC8
 
 Apprenant -down-- UC1
 Apprenant -down-- UC2
@@ -14,4 +16,6 @@ Apprenant -down-- UC2
 Formateur -down-- UC4
 Formateur -down-- UC5
 Formateur -down-- UC6
+Formateur -down-- UC7
+Formateur -down-- UC8
 @enduml
