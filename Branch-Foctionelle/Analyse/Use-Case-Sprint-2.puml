@@ -1,5 +1,4 @@
 @startuml
-actor Apprenant
 actor Formateur
 
 usecase "Consulter les résultats des apprenants" as UC6
