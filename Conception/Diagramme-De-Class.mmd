@@ -1,58 +1,55 @@
 classDiagram
-    class QCM {
-        + int id
-        + String title
-        + String description
-        + DateTime created_at
-        + DateTime updated_at
-    }
 
-    class Question {
-        + int id
-        + int qcm_id
-        + String text
-        + String type
-    }
+namespace PkgQcm {
+  class Apprenant {
+    id : int
+    nom : string
+    prenom : string
+    email : string
+  }
 
-    class Choice {
-        + int id
-        + int question_id
-        + String text
-        + Boolean is_correct
-    }
+  class Qcm {
+    id : int
+    titre : string
+    description : string
+    date_creation : date
+  }
 
-    class Resultat {
-        + int id
-        + int qcm_id
-        + int apprenant_id
-        + float score
-        + DateTime completed_at
-    }
+  class Question {
+    id : int
+    contenu : string
+    type : string %% Choix unique, choix multiple
+  }
 
-    class Apprenant {
-        + int id
-        + String name
-        + String email
-        + String password
-    }
+  class OptionQuestion {
+    id : int
+    texte : string
+    est_correcte : bool
+  }
 
-    class Formateur {
-        + int id
-        + String name
-        + String email
-        + String password
-    }
+  class ReponseQcm {
+    id : int
+    duree : int
+    score : float
+  }
 
-    QCM "1" -- "0..*" Question : contient
-    Question "1" -- "0..*" Choice : contient
-    QCM "1" -- "0..*" Resultat : lié à
-    Resultat "0..*" -- "1" Apprenant : appartient à
-    Formateur "1" -- "0..*" QCM : crée
+  class ReponseQuestion {
+    id : int
+    reponse_texte : string
+    est_correcte : bool
+  }
 
-    %% Styling classes to be light blue (AEE7FF)
-    style QCM fill:#AEE7FF
-    style Question fill:#AEE7FF
-    style Choice fill:#AEE7FF
-    style Resultat fill:#AEE7FF
-    style Apprenant fill:#AEE7FF
-    style Formateur fill:#AEE7FF
+  class BrancheQuestion {
+    id : int
+    condition : string
+  }
+}
+
+OptionQuestion --> Question
+ReponseQuestion --> Question
+BrancheQuestion --> "*" Question
+ReponseQuestion <-- Apprenant
+ReponseQuestion --> "*" OptionQuestion
+Qcm --> BrancheQuestion
+Apprenant --> ReponseQcm
+ReponseQcm --> Qcm
